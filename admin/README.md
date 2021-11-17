@@ -11,6 +11,11 @@ To start
 Launch docker-compose up twice in each directory
 For non explained reason mysql service fail to run at the first run
 
+## Run artisan commands from the container
+
+Attach shell to run commands from admin container
+`docker-compose exec admin sh`
+
 ## Run migration
 
 run shell into admin container and run `php artisan migrate` 
