@@ -35,3 +35,7 @@ Create new schema table : `php artisan make:migration create_flights_table --cre
 
 Add new column : `php artisan make:migration add_colname_to_users_table --table=users`
 
+### Models
+
+Generate model with controller seeder & factory, name should be in singular
+`php artisan make:model ModelName -cfs`

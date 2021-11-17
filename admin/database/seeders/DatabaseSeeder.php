@@ -17,12 +17,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('roles')->insert(['name' => "admin"]);
-        DB::table('roles')->insert(['name' => "default"]);
-        User::factory()->create(["email" => 'admin@email.com'])->role()->attach(1);
-        User::factory()->create(["email" => 'user@email.com'])->role()->attach(2);
-        Movie::factory(17)->create([
-            'user_id' => 1
+        $this->call([
+            RoleSeeder::class,
+            UserSeeder::class,
+            MovieSeeder::class
         ]);
     }
 }
