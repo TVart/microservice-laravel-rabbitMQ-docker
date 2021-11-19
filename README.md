@@ -21,6 +21,9 @@ To start
 `composer require --dev barryvdh/laravel-ide-helper`
 `php artisan ide:generate`
 
+### Install laravel-queue-rabbitmq
+`composer require vladimir-yuldashev/laravel-queue-rabbitmq`
+
 ## Run docker
 
 Create Dockerfile
