@@ -2,7 +2,6 @@
 /.vscode
 admin/.idea
 admin/.vscode
-
 admin/node_modules
 admin/public/hot
 admin/storage/*.key
@@ -15,3 +14,18 @@ admin/Homestead.yaml
 admin/npm-debug.log
 admin/yarn-error.log
 admin/storage/
+
+front/.idea
+front/.vscode
+front/node_modules
+front/public/hot
+front/storage/*.key
+front/vendor
+front/.env.backup
+front.phpunit.result.cache
+front/docker-compose.override.yml
+front/Homestead.json
+front/Homestead.yaml
+front/npm-debug.log
+front/yarn-error.log
+front/storage/
