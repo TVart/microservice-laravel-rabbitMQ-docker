@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: 'php artisan serve --host=0.0.0.0'
+    volumes:
+      - .:/app
+    ports:
+      - 8001:8000
+    depends_on:
+      - front_db
+
+  #admin_queue:
+  #  build:
+  #    context: .
+  #    dockerfile: Dockerfile
+  #  command: 'php artisan queue:work'
+  #  depends_on:
+  #    - front_db
+
+  front_db:
+    image: mysql:5.7.22
+    environment:
+      MYSQL_DATABASE: front
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./storage/db/data:/var/lib/mysql
+    ports:
+      - 33064:3306

@@ -5,8 +5,26 @@ microservice app
 
 To start
 *****************************************************************
+## Pre-requisite
+
+### Install laravel
+`composer global require laravel/installer`
+
+### Export path
+`export PATH="$PATH:$HOME/.config/composer/vendor/bin"`
+`source ~/.bashrc`
+
+### Create project
+`laravel new admin`
+
+### Install ide helper
+`composer require --dev barryvdh/laravel-ide-helper`
+`php artisan ide:generate`
 
 ## Run docker
+
+Create Dockerfile
+Create docker-compose.yaml
 
 Launch docker-compose up twice in each directory
 For non explained reason mysql service fail to run at the first run
